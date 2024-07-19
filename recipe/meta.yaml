@@ -31,6 +31,7 @@ requirements:
     - tomli
     - typing_extensions
     - wsproto >=0.14.0
+    - rich-click >=1.8.3,<2.0.0
 
 test:
   imports:
