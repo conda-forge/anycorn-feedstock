@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: edb443aa46d5c396d4c53cb5f1e425b88e63d8a4fb9af2b835640a7b3351857f
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - anycorn = anycorn.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -20,9 +20,9 @@ requirements:
   host:
     - pip
     - hatchling
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - exceptiongroup >=1.2.0,<2.0
     - h11
     - h2 >=3.1.0
@@ -41,6 +41,7 @@ test:
     - anycorn --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/davidbrochart/anycorn
