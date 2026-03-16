@@ -1,5 +1,5 @@
 {% set name = "anycorn" %}
-{% set version = "0.18.2" %}
+{% set version = "0.18.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9bf2e2b4f673ee8bf8cf5d15a624ac6c62906c4dcf958ac521724bcea5298dab
+  sha256: 262366e459d1631c2a2aee1018fa58fa4f7adc516e27d6cfbf4e1c2478f9d7ae
 
 build:
   noarch: python
