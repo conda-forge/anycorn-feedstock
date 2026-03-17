@@ -7,9 +7,7 @@ Home: https://github.com/davidbrochart/anycorn
 
 Package license: MIT
 
-Summary: A fork of Hypercorn that uses AnyIO
-
-Development: https://github.com/davidbrochart/anycorn
+Summary: A fork of Hypercorn that uses AnyIO.
 
 Current build status
 ====================
